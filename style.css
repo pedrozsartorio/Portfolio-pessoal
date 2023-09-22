@@ -1,61 +1,117 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
-header{
-    display: flex;
-    background-color: rgb(0, 0, 0);
+
+body {
+    overflow-x: hidden;
+}
+
+header {
     justify-content: center;
     height: 70px;
-    font-family: Arial, Helvetica, sans-serif;
-    border-bottom: 1px solid rgba(138, 43, 226, 0.7) ;
+    width: 100vw;
+    background-color: black;
+    border-bottom: 1px solid blueviolet;
 }
-.letra{
+
+.default {
+    height: max-content;
+    padding: 25px 0px;
+}
+
+header div.container {
+    width: 100%;
+    height: 100%;
     display: flex;
-    color: blueviolet;
     align-items: center;
+    justify-content: space-between;
 }
-h1{
-    display: flex;
-    color: white;
-    align-items: center;
+
+.container {
+    max-width: 1200px;
+    margin: auto;
 }
-.container{
-    display: flex;
-    justify-content: center;
-    width: 990px;
-}
-.fundo{
-    background-image: url(img/1325726.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+
+#HOME {
+
     height: calc(100vh - 70px);
-
+    padding: 0 15px;
+    width: 100vw;
+    background-color: #010101;
 }
-.menu{
+
+#HOME .container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    height: inherit;
 }
-nav ul,
-nav li{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-nav ul{
-    display: flex;
-}
-nav a{
-    display: block;
-    padding: 15px;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: rgb(255, 255, 255);
-}
-nav .active a,
-nav a:hover {
-    background-color: blueviolet;
 
+#HOME .content {
+    color: #fff;
+}
+
+.content h1 {
+    font-size: 2.5rem;
+}
+
+.content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #c9c7c7;
+}
+
+#HOME .img img {
+    width: 300px;
+    box-shadow: -15px 15px 0px 0px blueviolet;
+}
+
+span {
+    color: rgba(138, 43, 226, 1);
+}
+
+h1 {
+    color: white;
+}
+
+p {
+    color: white;
+}
+
+nav ul,
+nav .menu li {
+    list-style: none;
+
+}
+
+nav ul .menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+nav .menu a {
+    font-weight: 500;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.2s ease;
+    padding-left: 25px;
+}
+
+nav .active .menu a,
+nav .menu a:hover {
+    color: blueviolet;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,200px);
+    gap: 20px;
+}
+.grid div{
+    background-color: blueviolet;
+    color: white;
 }
